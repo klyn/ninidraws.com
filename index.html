@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./app.min.css">
+    <title>Nini</title>
+  </head>
+  <body id="body" class="accent-bgcolour">
+    <table id="layout-table" cellpadding="0" cellspacing="0">
+      <tr>
+        <td
+          id="left-sidebar"
+          rowspan="2"
+          class="secondary-bgcolour accent-border-colour"
+        >
+          <div id="closed-left-sidebar-toolbar">
+            <div id="top-logo-small" class="extra-colour-1">N</div>
+            <div id="open-left-sidebar-btn" class="btn accent">
+              <div>&#8614;</div>
+            </div>
+          </div>
+          <table id="left-sidebar-table" cellpadding="0" cellspacing="0">
+            <tr>
+              <td colspan="2">
+                <div id="top-logo" class="extra-colour-1">Nini</div>
+                <div id="close-left-sidebar-btn" class="btn accent">
+                  &#x2715;
+                </div>
+                <span id="version" class="extra-colour-1">v0.1-alpha</span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" id="toolbar-cell"></td>
+            </tr>
+            <tr>
+              <td class="primary-colour">
+                <h3>:: Documentation</h3>
+                <ul class="btn-menu btn-menu__vartical">
+                  <li>
+                    <div id="docs-about-btn" class="btn accent">
+                      <b>About Nini</b>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="./files/nini-code-examples.zip"
+                      target="_blank"
+                      class="btn accent"
+                    >
+                      Example Programs (ZIP)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./files/nini-lang-ref.pdf"
+                      target="_blank"
+                      class="btn accent"
+                    >
+                      Language Reference Manual (PDF)
+                    </a>
+                  </li>
+                </ul>
+
+                <h3>:: Get in Touch</h3>
+                Please send your feedback and bug reports to:
+                <span style="color: #fff; font-family: monospace"
+                  ><b>nini.loves.coding@gmail.com</b></span
+                >
+
+                <h3>:: Credits</h3>
+                <p>
+                  Nini was inspired by a language called
+                  <a href="https://dbn.media.mit.edu/" target="_blank"
+                    >Design by Number</a
+                  >.
+                </p>
+                <p>
+                  Some of the current theme colours of the text-editor has been
+                  taken from the
+                  <a
+                    href="https://vscodethemes.com/e/sainnhe.gruvbox-material/gruvbox-material-light"
+                    target="_blank"
+                    >Gruvbox Material</a
+                  >
+                  VS Code theme.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td id="main-panel" class="primary-bgcolour accent-border-colour">
+          <div id="canvas-scroll-wrapper" class="secondary-scrollbar-colour">
+            <canvas
+              id="paper1"
+              class="main-canvas extra-border-colour-1"
+              width="0"
+              height="0"
+            ></canvas>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td id="bottom-sidebar">
+          <div id="closed-bottom-sidebar-toolbar">
+            <div id="open-bottom-sidebar-btn" class="btn accent">
+              <div>&#8613; Open Editor</div>
+            </div>
+          </div>
+          <!-- copy of the body of editor/editor.html -->
+          <table id="editor-layout-table" cellpadding="0" cellspacing="0">
+            <tr>
+              <td id="editor-toolbar-cell">
+                <div id="run-btn" class="btn accent">Run</div>
+                <div id="clear-btn" class="btn accent">Reset</div>
+                <div id="pop-up-editor" class="btn accent">Pop-up Editor</div>
+                <div id="toggle-grid-control">
+                  <input
+                    type="checkbox"
+                    name="grid-checkbox"
+                    id="toggle-grid-checkbox"
+                    value="value"
+                  />
+                  <label for="toggle-grid-checkbox" class="accent"
+                    >Show Grid</label
+                  >
+                </div>
+                <div id="save-code" class="btn accent">Save</div>
+                <div id="load-code" class="btn accent">Load</div>
+                <input type="file" id="load-code-file-input" />
+                <div id="close-bottom-sidebar-btn" class="btn accent">
+                  &#x2715;
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td id="editor-cell">
+                <div id="editor-scroll-wrapper" class="accent-scrollbar-colour">
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td id="loc-td">
+                        <div
+                          id="loc-bar"
+                          class="primary-colour accent-bgcolour"
+                        ></div>
+                      </td>
+                      <td id="editor-td">
+                        <textarea
+                          id="code-editor"
+                          maxlength="4096"
+                          spellcheck="false"
+                          class="accent-bgcolour extra-colour-2"
+                        ></textarea>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <!-- end of editor/editor.html -->
+        </td>
+      </tr>
+    </table>
+    <script src="./app.min.js"></script>
+  </body>
+</html>

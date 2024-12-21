@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./editor.min.css">
+    <title>Nini :: code editor</title>
+  </head>
+  <body id="body" class="editor-body accent-bgcolour">
+    <table id="editor-layout-table" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="editor-toolbar-cell">
+          <div id="run-btn" class="btn accent">Run</div>
+          <div id="clear-btn" class="btn accent">Reset</div>
+          <div id="pop-up-editor" class="btn accent">Pop-up Editor</div>
+          <div id="toggle-grid-control">
+            <input
+              type="checkbox"
+              name="grid-checkbox"
+              id="toggle-grid-checkbox"
+              value="value"
+            />
+            <label for="toggle-grid-checkbox" class="accent">Show Grid</label>
+          </div>
+          <div id="save-code" class="btn accent">Save</div>
+          <div id="load-code" class="btn accent">Load</div>
+          <input type="file" id="load-code-file-input" />
+          <div id="close-bottom-sidebar-btn" class="btn accent">&#x2715;</div>
+        </td>
+      </tr>
+      <tr>
+        <td id="editor-cell">
+          <div id="editor-scroll-wrapper" class="accent-scrollbar-colour">
+            <table cellpadding="0" cellspacing="0">
+              <tr>
+                <td id="loc-td">
+                  <div
+                    id="loc-bar"
+                    class="primary-colour accent-bgcolour"
+                  ></div>
+                </td>
+                <td id="editor-td">
+                  <textarea
+                    id="code-editor"
+                    maxlength="4096"
+                    spellcheck="false"
+                    class="accent-bgcolour extra-colour-2"
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <script src="./editor.min.js"></script>
+  </body>
+</html>
